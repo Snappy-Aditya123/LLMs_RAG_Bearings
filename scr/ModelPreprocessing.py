@@ -4,8 +4,6 @@ import numpy as np
 import math 
 import random
 
-
-
 # First we will work on vibration channel as it is most important data 
 
 # model arch follows this rules 
@@ -17,7 +15,6 @@ import random
 # preprocessing the Vibration channel 
 # Vibration channel is mostly standard 64Hz frequency but some data poins are either lessor more based on the eda 
 # analysis so padding and cutting unnecessary data will be performed first this preporcessing can be applied to other high feequency channels too
-
 
 def pad_high_channels(
     signal,
@@ -79,8 +76,6 @@ def pad_high_channels(
         mask = np.ones(target_length, dtype=bool)
 
     return processed, mask
-
-
 
 def normalize_signals(signal: np.array, type):
     eps = 1e-8
